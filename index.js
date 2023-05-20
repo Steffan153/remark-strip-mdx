@@ -53,18 +53,27 @@ const defaults = {
   toml: empty,
 
   footnoteReference: empty,
-  footnoteDefinition: empty
+  footnoteDefinition: empty,
+
+  mdxjsEsm: empty,
+  mdxJsxAttribute: empty,
+  mdxJsxAttributeValueExpression: empty,
+  mdxJsxExpressionAttribute: empty,
+  mdxJsxFlowElement: empty,
+  mdxJsxTextElement: empty,
+  mdxFlowExpression: empty,
+  mdxTextExpression: empty,
 }
 
 const own = {}.hasOwnProperty
 
 /**
- * Plugin to remove markdown formatting.
+ * Plugin to remove MDX formatting.
  *
  * @type {import('unified').Plugin<[Options?] | void[], Root>}
  * @returns {import('unified').Transformer<Root>}
  */
-export default function stripMarkdown(options = {}) {
+export default function stripMDX(options = {}) {
   const handlers = Object.assign({}, defaults)
   const remove = options.remove || []
   const keep = options.keep || []

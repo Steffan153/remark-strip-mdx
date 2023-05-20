@@ -1,6 +1,6 @@
 {
-  "name": "strip-markdown",
-  "version": "5.0.1",
+  "name": "remark-strip-mdx",
+  "version": "1.0.0",
   "description": "remark plugin to remove markdown formatting",
   "license": "MIT",
   "keywords": [
@@ -9,22 +9,14 @@
     "remark-plugin",
     "plugin",
     "mdast",
-    "markdown",
+    "mdx",
     "text",
     "plain",
     "text"
   ],
-  "repository": "remarkjs/strip-markdown",
-  "bugs": "https://github.com/remarkjs/strip-markdown/issues",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
-  },
-  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-  "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-    "Ohtake Tomohiro <ohtake.tomohiro@jp.fujitsu.com>"
-  ],
+  "repository": "Steffan153/remark-strip-mdx",
+  "bugs": "https://github.com/Steffan153/remark-strip-mdx/issues",
+  "author": "Steffan153",
   "sideEffects": false,
   "type": "module",
   "main": "index.js",
@@ -56,38 +48,11 @@
   },
   "scripts": {
     "build": "rimraf \"*.d.ts\" && tsc && type-coverage",
-    "format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
-    "test-api": "node --conditions development test.js",
-    "test-coverage": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 --reporter lcov npm run test-api",
-    "test": "npm run build && npm run format && npm run test-coverage"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true,
-    "bracketSpacing": false,
-    "semi": false,
-    "trailingComma": "none"
-  },
-  "xo": {
-    "prettier": true,
-    "ignores": [
-      "types/index.d.ts"
-    ]
+    "format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix"
   },
   "remarkConfig": {
     "plugins": [
       "preset-wooorm"
-    ]
-  },
-  "typeCoverage": {
-    "atLeast": 100,
-    "detail": true,
-    "strict": true,
-    "ignoreCatch": true,
-    "#": "needed `any`s",
-    "ignoreFiles": [
-      "index.d.ts"
     ]
   }
 }
