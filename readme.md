@@ -37,3 +37,7 @@ Yields:
 ```txt
 Some emphasis, importance, and code.
 ```
+
+[remark]: https://github.com/remarkjs/remark
+
+[npm]: https://docs.npmjs.com/cli/install
