@@ -1,6 +1,6 @@
 {
   "name": "remark-strip-mdx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "remark plugin to remove markdown formatting",
   "license": "MIT",
   "keywords": [
@@ -26,9 +26,9 @@
     "index.js"
   ],
   "dependencies": {
-    "@types/mdast": "^3.0.0",
-    "@types/unist": "^2.0.6",
-    "unified": "^10.0.0"
+    "@types/mdast": "^4.0.0",
+    "@types/unist": "^3.0.0",
+    "unified": "^11.0.3"
   },
   "devDependencies": {
     "@types/tape": "^4.0.0",
